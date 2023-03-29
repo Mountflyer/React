@@ -1,17 +1,18 @@
 import React from 'react';
 import s from './Post.module.css';
 
-const Post = () => {
+const Post = (props) => {
     return (
 
-        <><div className={s.item}>
-            post 1
-        </div><div> <span>Like</span>
-            </div></>
-
-
-
+        <div className={s.item}>
+            {props.message}
+            <div>
+               <div>
+                 { props.likes}
+                </div>
+            </div>
+        </div>
     )
 }
 
-export default Post;
+export default Post; 
